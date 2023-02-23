@@ -20,6 +20,16 @@ def _getGridCenters(llc, N, resolution):
                 centers[i, j, k, :] = np.array([x, y, z])
     return centers
 
+vocab_list_2 = ["pad", "start", "end",
+    "C", "c", "N", "n", "S", "s", "P", "O", "o",
+    "B", "F", "I",
+    "X", "Y", "Z",
+    "1", "2", "3", "4", "5", "6",
+    "#", "=", "-", "(", ")"
+]
+vocab_i2c_v1 = {i: x for i, x in enumerate(vocab_list_2)}
+vocab_c2i_v1 = {vocab_i2c_v1[i]: i for i in vocab_i2c_v1}
+
 resolution = 1.
 size = 24
 N = [size, size, size]
@@ -61,7 +71,7 @@ def generate_representation(in_smile):
         Chem.AllChem.MMFFOptimizeMolecule(mh, maxIters=100)
         mh = randomly_rotate(mh)
         m = Chem.RemoveHs(mh)
-        mol = SmallMol(m)
+        mol = SmallMol(m, verbose=False)
         return mol
     except:  # Rarely the conformer generation fails
         print("Gen_rep_fails")
@@ -131,7 +141,7 @@ def voxelize(multisigmas, coords, center, displacement=2.):
     center = center + (np.random.rand(3) - 0.5) * 2 * displacement
 
     centers2D = global_centers + center
-    occupancy = _getOccupancyC(coords.astype(np.float32),
+    occupancy = _getOccupancyC(coords.astype(np.float32).reshape(-1,3),
                                centers2D.reshape(-1, 3),
                                multisigmas).reshape(size, size, size, 8)
     return occupancy.astype(np.float32).transpose(3, 0, 1, 2,)
@@ -193,3 +203,47 @@ def queue_datagen(smiles, batch_size=128, n_proc=12, mp_pool=None):
         for i in range(n_batches):
             batch_idx = sh_indencies[i * batch_size:(i + 1) * batch_size]
             yield my_batch_prep.transform_data(smiles[batch_idx])
+
+def smile_to_sstring(sstring):
+    sstring = sstring.replace("Cl", "X").replace("[nH]", "Y").replace("Br", "Z")
+    try:
+        vals = [1] + [vocab_c2i_v1[xchar] for xchar in sstring] + [2]
+        while len(vals) < 62:
+            vals.append(0)
+    except KeyError:
+        raise ValueError(("Unkown SMILES tokens: {} in string '{}'."
+                          .format(", ".join([x for x in sstring if x not in vocab_c2i_v1]),
+                                                                      sstring)))
+    return torch.tensor(vals).long()
+
+
+def string_gen_V1(in_string):
+    out = in_string.replace("Cl", "X").replace("[nH]", "Y").replace("Br", "Z")
+    return out
+
+def string_rev_V1(in_string):
+    out = in_string.replace("X","Cl").replace("Y","[nH]").replace("Z","Br")
+    return out
+
+def collate_batch(smiles):
+    inputs = []
+    pharms = []
+    target = []
+    lengths = []
+
+    smiles = [string_gen_V1(x) for x in smiles]
+    smiles = sorted(smiles, key=len, reverse=True)
+    smiles = [string_rev_V1(x) for x in smiles]
+
+    for smile in smiles:
+        try:
+            rep, pharm = get_mol_voxels(smile)
+            inputs.append(rep)
+            pharms.append(pharm)
+            target.append(smile_to_sstring(smile))
+            lengths.append(torch.tensor(len(string_gen_V1(smile))))
+        except:
+            continue
+
+    return torch.stack(inputs),torch.stack(target),torch.stack(pharms), torch.stack(lengths)
+

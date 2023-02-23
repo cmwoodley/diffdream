@@ -137,21 +137,81 @@ class Encoder(nn.Module):
         self.bn1 = nn.BatchNorm3d(8)
         self.relu1 = nn.ReLU()
 
-        self.conv3d2 = nn.Conv3d(in_channels=8, out_channels=3, kernel_size=(3,3,3), stride=(1,1,1),padding=1)
-        # self.fc2 = nn.Linear(in_features=24, out_features=24)
-        self.bn2 = nn.BatchNorm3d(3)
+        self.conv3d2 = nn.Conv3d(in_channels=8, out_channels=16, kernel_size=(3,3,3), stride=(1,1,1),padding=1)
+        self.bn2 = nn.BatchNorm3d(16)
+
+        self.conv3d3 = nn.Conv3d(in_channels=16, out_channels=8, kernel_size=(3,3,3), stride=(1,1,1),padding=1)
+        self.bn3 = nn.BatchNorm3d(8)
+
+        self.conv3d4 = nn.Conv3d(in_channels=8, out_channels=3, kernel_size=(3,3,3), stride=(1,1,1),padding=1)
+        self.sig1 = nn.Sigmoid()
+        # self.bn4 = nn.BatchNorm3d(3)
+        
+    def forward(self, x):
+        x = self.conv3d1(x)
+        x = self.fc1(x)
+        x = self.bn1(x)
+        x = self.relu1(x)
+
+        x = self.conv3d2(x)
+        x = self.fc1(x)
+        x = self.bn2(x)
+        x = self.relu1(x)
+        
+        x = self.conv3d3(x)
+        x = self.fc1(x)
+        x = self.bn3(x)
+        x = self.relu1(x)
+
+        x = self.conv3d4(x)
+        x = self.fc1(x)
+        # x = self.bn4(x)
+        x = self.sig1(x)
+        return x
+
+class AutoEncoder(nn.Module):
+    def __init__(self):
+        super(AutoEncoder, self).__init__()
+        # Create the first conv3d layer
+        self.conv3d1 = nn.Conv3d(in_channels=5, out_channels=8, kernel_size=(2,2,2), stride=(2,2,2),padding=0)
+        self.fc1 = nn.Linear(in_features=12, out_features=12)
+        self.bn1 = nn.BatchNorm3d(8)
+        self.relu = nn.ReLU()
+
+        # Create the second conv3d layer
+        self.conv3d2 = nn.Conv3d(in_channels=8, out_channels=16, kernel_size=(2,2,2), stride=(2,2,2),padding=0)
+        self.fc2 = nn.Linear(in_features=6, out_features=6)
+        self.bn2 = nn.BatchNorm3d(16)
+        
+        #First deconvolutional layer
+        self.tconv3d1 = nn.ConvTranspose3d(16, 8, kernel_size=(2,2,2),stride=(2,2,2))
+        self.fc3 = nn.Linear(in_features=12, out_features=12)
+        self.bn3 = nn.BatchNorm3d(8)
+
+        #Second deconvolutional layer
+        self.tconv3d2 = nn.ConvTranspose3d(8, 3, kernel_size=(2,2,2),stride=(2,2,2))
+        self.fc4 = nn.Linear(in_features=24, out_features=24)
+        self.bn4 = nn.BatchNorm3d(3)
         self.sig1 = nn.Sigmoid()
         
     def forward(self, x):
         x = self.conv3d1(x)
         x = self.fc1(x)
         x = self.bn1(x)
-        # x = self.relu1(x)
-        x = self.sig1(x)
+        x = self.relu(x)
         x = self.conv3d2(x)
-        # x = self.fc2(x)
+        x = self.fc2(x)
         x = self.bn2(x)
+        x = self.relu(x)
+        x = self.tconv3d1(x)
+        x = self.fc3(x)
+        x = self.bn3(x)
+        x = self.relu(x)
+        x = self.tconv3d2(x)
+        x = self.fc4(x)
+        x = self.bn4(x)
         x = self.sig1(x)
+
         return x
 
 #Encoder and Decoder from Ligdream
@@ -210,7 +270,7 @@ class DecoderRNN(nn.Module):
         packed = pack_padded_sequence(embeddings, lengths, batch_first=True)
         hiddens, _ = self.lstm(packed)
         outputs = self.linear(hiddens[0])
-        return outputs
+        return outputs#, hiddens
 
     def sample(self, features, states=None):
         """Samples SMILES tockens for given shape features (Greedy search)."""
@@ -245,21 +305,21 @@ class DecoderRNN(nn.Module):
 
                 rand_num = np.random.rand(probs_np.shape[0])
                 iter_sum = np.zeros((probs_np.shape[0],))
-                tokens = np.zeros(probs_np.shape[0], dtype=np.int)
+                tokens = np.zeros(probs_np.shape[0], dtype=np.int64)
 
                 for i in range(probs_np.shape[1]):
                     c_element = probs_np[:, i]
                     iter_sum += c_element
                     valid_token = rand_num < iter_sum
                     update_indecies = np.logical_and(valid_token,
-                                                     np.logical_not(tokens.astype(np.bool)))
+                                                     np.logical_not(tokens.astype(bool)))
                     tokens[update_indecies] = i
 
                 # put back on the GPU.
                 if probs.is_cuda:
-                    predicted = Variable(torch.LongTensor(tokens.astype(np.int)).cuda())
+                    predicted = Variable(torch.LongTensor(tokens.astype(np.int64)).cuda())
                 else:
-                    predicted = Variable(torch.LongTensor(tokens.astype(np.int)))
+                    predicted = Variable(torch.LongTensor(tokens.astype(np.int64)))
 
             sampled_ids.append(predicted)
             inputs = self.embed(predicted)
