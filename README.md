@@ -1,6 +1,6 @@
 ## "Diffream" - Pharmacophore guided generative diffusion model
 
-Carried out as a side project during my PostDoc at the University of Liverpool. Effectively an attempt at trying to replace the autoencoder used in [LigDream](https://doi.org/10.1021/acs.jcim.8b00706) with a 3D Unet.
+Carried out as a side project during my PostDoc at the University of Liverpool to get to grips with the Pytorch library. Effectively an attempt at trying to replace the autoencoder used in [LigDream](https://doi.org/10.1021/acs.jcim.8b00706) with a 3D Unet and generate molecules using stable diffusion. More details are included in a [presentation delivered internally at UoL.](https://github.com/cmwoodley/diffdream/blob/master/Internal_presentation.pdf)
 
 Adapted a unet structure for medical image segmentation from [3D U-Net: Learning Dense Volumetric Segmentation from Sparse Annotation](https://doi.org/10.1007/978-3-319-46723-8_49)
 
