@@ -241,7 +241,7 @@ def collate_batch(smiles):
             inputs.append(rep)
             pharms.append(pharm)
             target.append(smile_to_sstring(smile))
-            lengths.append(torch.tensor(len(string_gen_V1(smile))))
+            lengths.append(torch.tensor(len(string_gen_V1(smile))+2))
         except:
             continue
 

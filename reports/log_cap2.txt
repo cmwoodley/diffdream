@@ -1,0 +1,480 @@
+Batch: 50
+Captioning Loss: 0.5707142949104309.
+Batch: 100
+Captioning Loss: 0.5343559980392456.
+Batch: 150
+Captioning Loss: 0.46426063776016235.
+Batch: 200
+Captioning Loss: 0.5447250008583069.
+Batch: 250
+Captioning Loss: 0.41452473402023315.
+Batch: 300
+Captioning Loss: 0.41067349910736084.
+Batch: 350
+Captioning Loss: 0.34880080819129944.
+Batch: 400
+Captioning Loss: 0.30320605635643005.
+Batch: 450
+Captioning Loss: 0.34288129210472107.
+Batch: 500
+Captioning Loss: 0.3659100830554962.
+Batch: 550
+Captioning Loss: 0.3380501866340637.
+Batch: 600
+Captioning Loss: 0.2993578612804413.
+Batch: 650
+Captioning Loss: 0.3116437792778015.
+Batch: 700
+Captioning Loss: 0.298089861869812.
+Batch: 750
+Captioning Loss: 0.29278048872947693.
+Batch: 800
+Captioning Loss: 0.35404592752456665.
+Batch: 850
+Captioning Loss: 0.3114977180957794.
+Batch: 900
+Captioning Loss: 0.29801738262176514.
+Batch: 950
+Captioning Loss: 0.3207540512084961.
+Batch: 1000
+Captioning Loss: 0.2663921117782593.
+Batch: 1050
+Captioning Loss: 0.3055514693260193.
+Batch: 1100
+Captioning Loss: 0.3207700848579407.
+Batch: 1150
+Captioning Loss: 0.29655471444129944.
+Batch: 1200
+Captioning Loss: 0.2869674265384674.
+Batch: 1250
+Captioning Loss: 0.299399733543396.
+Batch: 1300
+Captioning Loss: 0.33278441429138184.
+Batch: 1350
+Captioning Loss: 0.2889121174812317.
+Batch: 1400
+Captioning Loss: 0.3210044205188751.
+Batch: 1450
+Captioning Loss: 0.29982513189315796.
+Batch: 1500
+Captioning Loss: 0.31973353028297424.
+Batch: 1550
+Captioning Loss: 0.3272630572319031.
+Batch: 1600
+Captioning Loss: 0.29162588715553284.
+Batch: 1650
+Captioning Loss: 0.36194607615470886.
+Batch: 1700
+Captioning Loss: 0.5803089737892151.
+Batch: 1750
+Captioning Loss: 0.2543909549713135.
+Batch: 1800
+Captioning Loss: 0.2516205608844757.
+Batch: 1850
+Captioning Loss: 0.370009183883667.
+Batch: 1900
+Captioning Loss: 0.2912087142467499.
+Batch: 1950
+Captioning Loss: 0.3551032841205597.
+Batch: 2000
+Captioning Loss: 0.324504554271698.
+Batch: 2050
+Captioning Loss: 0.32906877994537354.
+Batch: 2100
+Captioning Loss: 0.32005706429481506.
+Batch: 2150
+Captioning Loss: 0.3070037364959717.
+Batch: 2200
+Captioning Loss: 0.28190627694129944.
+Batch: 2250
+Captioning Loss: 0.2799825072288513.
+Batch: 2300
+Captioning Loss: 0.2723439931869507.
+Batch: 2350
+Captioning Loss: 0.2929626405239105.
+Batch: 2400
+Captioning Loss: 0.2828163206577301.
+Batch: 2450
+Captioning Loss: 0.28846263885498047.
+Batch: 2500
+Captioning Loss: 0.284245103597641.
+Batch: 2550
+Captioning Loss: 0.2833142876625061.
+Batch: 2600
+Captioning Loss: 0.2644869089126587.
+Batch: 2650
+Captioning Loss: 0.27562445402145386.
+Batch: 2700
+Captioning Loss: 0.2696549594402313.
+Batch: 2750
+Captioning Loss: 0.2720338702201843.
+Batch: 2800
+Captioning Loss: 0.2688674032688141.
+Batch: 2850
+Captioning Loss: 0.26850199699401855.
+Batch: 2900
+Captioning Loss: 0.2648189067840576.
+Batch: 2950
+Captioning Loss: 0.2637485861778259.
+Batch: 3000
+Captioning Loss: 0.2618677020072937.
+Batch: 3050
+Captioning Loss: 0.26950982213020325.
+Batch: 3100
+Captioning Loss: 0.26582086086273193.
+Batch: 3150
+Captioning Loss: 0.25887447595596313.
+Batch: 3200
+Captioning Loss: 0.27791348099708557.
+Batch: 3250
+Captioning Loss: 0.262151300907135.
+Batch: 3300
+Captioning Loss: 0.25856319069862366.
+Batch: 3350
+Captioning Loss: 0.24591146409511566.
+Batch: 3400
+Captioning Loss: 0.2502150237560272.
+Batch: 3450
+Captioning Loss: 0.27772456407546997.
+Batch: 3500
+Captioning Loss: 0.2677939236164093.
+Batch: 3550
+Captioning Loss: 0.27471810579299927.
+Batch: 3600
+Captioning Loss: 0.2980822026729584.
+Batch: 3650
+Captioning Loss: 0.2530958354473114.
+Batch: 3700
+Captioning Loss: 0.24104882776737213.
+Batch: 3750
+Captioning Loss: 0.2604611814022064.
+Batch: 3800
+Captioning Loss: 0.2505326569080353.
+Batch: 3850
+Captioning Loss: 0.2591209411621094.
+Batch: 3900
+Captioning Loss: 0.2659335732460022.
+Batch: 3950
+Captioning Loss: 0.24811393022537231.
+Batch: 4000
+Captioning Loss: 0.25836724042892456.
+Batch: 4050
+Captioning Loss: 0.30045098066329956.
+Batch: 4100
+Captioning Loss: 0.26114749908447266.
+Batch: 4150
+Captioning Loss: 0.28320011496543884.
+Batch: 4200
+Captioning Loss: 0.2513626217842102.
+Batch: 4250
+Captioning Loss: 0.24487720429897308.
+Batch: 4300
+Captioning Loss: 0.2517164945602417.
+Batch: 4350
+Captioning Loss: 0.23129287362098694.
+Batch: 4400
+Captioning Loss: 0.2357640564441681.
+Batch: 4450
+Captioning Loss: 0.24001342058181763.
+Batch: 4500
+Captioning Loss: 0.24605689942836761.
+Batch: 4550
+Captioning Loss: 0.27117547392845154.
+Batch: 4600
+Captioning Loss: 0.24252037703990936.
+Batch: 4650
+Captioning Loss: 0.2670153081417084.
+Batch: 4700
+Captioning Loss: 0.2584051191806793.
+Batch: 4750
+Captioning Loss: 0.2806623876094818.
+Batch: 4800
+Captioning Loss: 0.27847132086753845.
+Batch: 4850
+Captioning Loss: 0.2707650661468506.
+Batch: 4900
+Captioning Loss: 0.2805093228816986.
+Batch: 4950
+Captioning Loss: 0.24587075412273407.
+Batch: 5000
+Captioning Loss: 0.26687389612197876.
+Batch: 5050
+Captioning Loss: 0.24441684782505035.
+Batch: 5100
+Captioning Loss: 0.2631031274795532.
+Batch: 5150
+Captioning Loss: 0.24828249216079712.
+Batch: 5200
+Captioning Loss: 0.24536345899105072.
+Batch: 5250
+Captioning Loss: 0.22323280572891235.
+Batch: 5300
+Captioning Loss: 0.25229334831237793.
+Batch: 5350
+Captioning Loss: 0.2348022609949112.
+Batch: 5400
+Captioning Loss: 0.2365889549255371.
+Batch: 5450
+Captioning Loss: 0.2746170163154602.
+Batch: 5500
+Captioning Loss: 0.256368488073349.
+Batch: 5550
+Captioning Loss: 0.24765314161777496.
+Batch: 5600
+Captioning Loss: 0.25551295280456543.
+Batch: 5650
+Captioning Loss: 0.24777013063430786.
+Batch: 5700
+Captioning Loss: 0.24868571758270264.
+Batch: 5750
+Captioning Loss: 0.25632885098457336.
+Batch: 5800
+Captioning Loss: 0.25414982438087463.
+Batch: 5850
+Captioning Loss: 0.24804653227329254.
+Batch: 5900
+Captioning Loss: 0.20416082441806793.
+Batch: 5950
+Captioning Loss: 0.27771592140197754.
+Batch: 6000
+Captioning Loss: 0.28600552678108215.
+Batch: 6050
+Captioning Loss: 0.2738904356956482.
+Batch: 6100
+Captioning Loss: 0.24792125821113586.
+Batch: 6150
+Captioning Loss: 0.26478874683380127.
+Batch: 6200
+Captioning Loss: 0.24776944518089294.
+Batch: 6250
+Captioning Loss: 0.24581316113471985.
+Batch: 6300
+Captioning Loss: 0.2488018274307251.
+Batch: 6350
+Captioning Loss: 0.24903392791748047.
+Batch: 6400
+Captioning Loss: 0.25099626183509827.
+Batch: 6450
+Captioning Loss: 0.24175338447093964.
+Batch: 6500
+Captioning Loss: 0.2449897825717926.
+Batch: 6550
+Captioning Loss: 0.22279071807861328.
+Batch: 6600
+Captioning Loss: 0.2624225616455078.
+Batch: 6650
+Captioning Loss: 0.25465911626815796.
+Batch: 6700
+Captioning Loss: 0.2717641294002533.
+Batch: 6750
+Captioning Loss: 0.24292156100273132.
+Batch: 6800
+Captioning Loss: 0.2832702100276947.
+Batch: 6850
+Captioning Loss: 0.2858786880970001.
+Batch: 6900
+Captioning Loss: 0.22981032729148865.
+Batch: 6950
+Captioning Loss: 0.2683902084827423.
+Batch: 7000
+Captioning Loss: 0.2413477897644043.
+Batch: 7050
+Captioning Loss: 0.25849565863609314.
+Batch: 7100
+Captioning Loss: 0.23991775512695312.
+Batch: 7150
+Captioning Loss: 0.2852855622768402.
+Batch: 7200
+Captioning Loss: 0.2756601870059967.
+Batch: 7250
+Captioning Loss: 0.31907418370246887.
+Batch: 7300
+Captioning Loss: 0.28058096766471863.
+Batch: 7350
+Captioning Loss: 0.27014943957328796.
+Batch: 7400
+Captioning Loss: 0.24520491063594818.
+Batch: 7450
+Captioning Loss: 0.2552083432674408.
+Batch: 7500
+Captioning Loss: 0.24548861384391785.
+Batch: 7550
+Captioning Loss: 0.26265132427215576.
+Batch: 7600
+Captioning Loss: 0.23277685046195984.
+Batch: 7650
+Captioning Loss: 0.2336144745349884.
+Batch: 7700
+Captioning Loss: 0.25156983733177185.
+Batch: 7750
+Captioning Loss: 0.24015170335769653.
+Batch: 7800
+Captioning Loss: 0.22010678052902222.
+Batch: 7850
+Captioning Loss: 0.23116418719291687.
+Batch: 7900
+Captioning Loss: 0.21987736225128174.
+Batch: 7950
+Captioning Loss: 0.23629647493362427.
+Batch: 8000
+Captioning Loss: 0.29454654455184937.
+Batch: 8050
+Captioning Loss: 0.26766300201416016.
+Batch: 8100
+Captioning Loss: 0.24405759572982788.
+Batch: 8150
+Captioning Loss: 0.253541499376297.
+Batch: 8200
+Captioning Loss: 0.23305676877498627.
+Batch: 8250
+Captioning Loss: 0.27406778931617737.
+Batch: 8300
+Captioning Loss: 0.26513028144836426.
+Batch: 8350
+Captioning Loss: 0.24184755980968475.
+Batch: 8400
+Captioning Loss: 0.23682795464992523.
+Batch: 8450
+Captioning Loss: 0.28044432401657104.
+Batch: 8500
+Captioning Loss: 0.2508355677127838.
+Batch: 8550
+Captioning Loss: 0.24160081148147583.
+Batch: 8600
+Captioning Loss: 0.266057550907135.
+Batch: 8650
+Captioning Loss: 0.23875436186790466.
+Batch: 8700
+Captioning Loss: 0.23259368538856506.
+Batch: 8750
+Captioning Loss: 0.20249943435192108.
+Batch: 8800
+Captioning Loss: 0.21298237144947052.
+Batch: 8850
+Captioning Loss: 0.2170807272195816.
+Batch: 8900
+Captioning Loss: 0.2685832977294922.
+Batch: 8950
+Captioning Loss: 0.21689699590206146.
+Batch: 9000
+Captioning Loss: 0.26560738682746887.
+Batch: 9050
+Captioning Loss: 0.23380635678768158.
+Batch: 9100
+Captioning Loss: 0.23560398817062378.
+Batch: 9150
+Captioning Loss: 0.24842125177383423.
+Batch: 9200
+Captioning Loss: 0.23042133450508118.
+Batch: 9250
+Captioning Loss: 0.21812187135219574.
+Batch: 9300
+Captioning Loss: 0.21158389747142792.
+Batch: 9350
+Captioning Loss: 0.22169700264930725.
+Batch: 9400
+Captioning Loss: 0.2898173928260803.
+Batch: 9450
+Captioning Loss: 0.2662114202976227.
+Batch: 9500
+Captioning Loss: 0.2477962076663971.
+Batch: 9550
+Captioning Loss: 0.3088122010231018.
+Batch: 9600
+Captioning Loss: 0.24199053645133972.
+Batch: 9650
+Captioning Loss: 0.2545565366744995.
+Batch: 9700
+Captioning Loss: 0.2568994462490082.
+Batch: 9750
+Captioning Loss: 0.24339908361434937.
+Batch: 9800
+Captioning Loss: 0.3037167191505432.
+Batch: 9850
+Captioning Loss: 0.30763229727745056.
+Batch: 9900
+Captioning Loss: 0.25260892510414124.
+Batch: 9950
+Captioning Loss: 0.2483321875333786.
+Batch: 10000
+Captioning Loss: 0.238191157579422.
+Batch: 10050
+Captioning Loss: 0.24057625234127045.
+Batch: 10100
+Captioning Loss: 0.23542486131191254.
+Batch: 10150
+Captioning Loss: 0.231328085064888.
+Batch: 10200
+Captioning Loss: 0.24516938626766205.
+Batch: 10250
+Captioning Loss: 0.2472395896911621.
+Batch: 10300
+Captioning Loss: 0.2343774437904358.
+Batch: 10350
+Captioning Loss: 0.24003298580646515.
+Batch: 10400
+Captioning Loss: 0.23102442920207977.
+Batch: 10450
+Captioning Loss: 0.23366519808769226.
+Batch: 10500
+Captioning Loss: 0.2344907522201538.
+Batch: 10550
+Captioning Loss: 0.2413967102766037.
+Batch: 10600
+Captioning Loss: 0.22710435092449188.
+Batch: 10650
+Captioning Loss: 0.23019243776798248.
+Batch: 10700
+Captioning Loss: 0.22539347410202026.
+Batch: 10750
+Captioning Loss: 0.22795791923999786.
+Batch: 10800
+Captioning Loss: 0.22581550478935242.
+Batch: 10850
+Captioning Loss: 0.22018960118293762.
+Batch: 10900
+Captioning Loss: 0.24003735184669495.
+Batch: 10950
+Captioning Loss: 0.2297084778547287.
+Batch: 11000
+Captioning Loss: 0.22319567203521729.
+Batch: 11050
+Captioning Loss: 0.23145616054534912.
+Batch: 11100
+Captioning Loss: 0.23413562774658203.
+Batch: 11150
+Captioning Loss: 0.20639276504516602.
+Batch: 11200
+Captioning Loss: 0.22275041043758392.
+Batch: 11250
+Captioning Loss: 0.22762127220630646.
+Batch: 11300
+Captioning Loss: 0.2371370494365692.
+Batch: 11350
+Captioning Loss: 0.22816923260688782.
+Batch: 11400
+Captioning Loss: 0.22696007788181305.
+Batch: 11450
+Captioning Loss: 0.23130549490451813.
+Batch: 11500
+Captioning Loss: 0.22322534024715424.
+Batch: 11550
+Captioning Loss: 0.2222192883491516.
+Batch: 11600
+Captioning Loss: 0.2218988686800003.
+Batch: 11650
+Captioning Loss: 0.22118450701236725.
+Batch: 11700
+Captioning Loss: 0.2186700403690338.
+Batch: 11750
+Captioning Loss: 0.22587214410305023.
+Batch: 11800
+Captioning Loss: 0.23653508722782135.
+Batch: 11850
+Captioning Loss: 0.21943838894367218.
+Batch: 11900
+Captioning Loss: 0.22755864262580872.
+Batch: 11950
+Captioning Loss: 0.21563947200775146.
+Batch: 12000
+Captioning Loss: 0.21481236815452576.
